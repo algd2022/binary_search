@@ -16,6 +16,7 @@ int main() {
 
     while (ub - lb > 1) {
         int mid = (lb + ub) / 2;
+        // printf("%d\n", mid);
         if (A[mid] >= k) {
             ub = mid;
         } else {

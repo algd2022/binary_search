@@ -29,7 +29,7 @@ int main() {
 
     while (ub - lb > 1) {
         int mid = (lb + ub) / 2;  // will not become 0
-        printf("%d\n", mid);
+        // printf("%d\n", mid);
         if (can_cut(mid)) {
             lb = mid;
         } else {
