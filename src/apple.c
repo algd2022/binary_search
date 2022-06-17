@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-int p(int A[],int m){
+int p(int m){
   int s = 0;
   int i = 0;
   for(i = 0; i<n; i++){
@@ -27,7 +27,7 @@ int main(){
     while(ub - lb > 1){
       int mid =(lb + ub)/2;
 
-      if(p(A,mid)){
+      if(p(mid)){
         ub = mid;
       }
 
