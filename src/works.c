@@ -6,22 +6,22 @@ int A[100000];
 
 int p(int m){
   int i;
-  int bunkatsu = 0;/*この操作で仕事の人数を配列Aの分割によって定める。実際の仕事の人数は分割数+1である*/
+  int koutai = 0;/*仕事する人数は"シフトの交代+1"で表せる*/
   int shigotoryo = 0;
   for(i=0; i<n; i++){
     if(A[i] > m){
-        bunkatsu = k+1;
+        koutai = k+1;
         break;/*この操作によって、確実にA[i]>midを含むときのp(mid)をfalse(すなわち0)にできる。*/
       }
     if(A[i] + shigotoryo > m){
-      bunkatsu++;
+      koutai++;
       shigotoryo = A[i];
     }
     else{
       shigotoryo += A[i];
     }
   }
-  return bunkatsu+1 <= k;/*先述の理由から、分割数に1を加える*/
+  return koutai+1 <= k;/*先述の理由から、に1を加える*/
 }
 
 int main(){
