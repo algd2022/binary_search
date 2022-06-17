@@ -26,9 +26,5 @@ int main(){
       
       printf("%d\n" , ub);
   
-      return 0;
-
-
-
-  return 0;
+return 0;
 }
