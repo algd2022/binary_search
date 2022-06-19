@@ -8,7 +8,7 @@ int p(int x,int n,int k,int A[]){
   int i;
   int work=0,people=1;
   for(i=0;i<n;i++){
-    if(A[i]>x) return 0;
+    if(A[i]>x) return 0;/*max(A)>xだと配分は不可能*/
     work+=A[i];
     if(work>x){
       people+=1;
@@ -24,7 +24,13 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb=0,ub=1000000001;
+  /*
+  lb:一番仕事量の多い人の仕事量がxでは配分できないこと(prople>k or max(A)>x)
+  がわかっている最大の数
+  ub:一番仕事量の多い人の仕事量がxで配分できること(people<=k)
+  がわかっている最小の数
+  */
+  lb=0,ub=1000000000;
   while(ub-lb>1){
     int mid=(ub+lb)/2;
     if(p(mid,n,k,A)) ub=mid;

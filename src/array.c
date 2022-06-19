@@ -10,7 +10,10 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-
+  /*
+  ub:A[x]>=kとなることがわかっている最小のx
+  lb:A[x]<kとなることがわかっている最大のx
+  */
   lb=-1,ub=n;
   while(ub-lb>1){
     int mid=(lb+ub)/2;
