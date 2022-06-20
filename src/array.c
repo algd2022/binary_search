@@ -13,7 +13,7 @@ int main(){
   }
   lb = -1;
   ub = n;
-  while(ub-lb>1){
+  while(ub - lb>1){
     int mid = (lb + ub) / 2;
     if(A[mid] < k){
       lb = mid;
