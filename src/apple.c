@@ -29,7 +29,7 @@ int main(){
       lb = mid;
     }
   }
-  printf("%d", ub);
+  printf("%d\n", ub);
 
   return 0;
 }
