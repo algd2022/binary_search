@@ -5,17 +5,17 @@ int k;
 int A[100000];
 
 int possible(int x){
-  int sum = 0, cnt = 0;
+  int prev = 0, cnt = 1;
   for(int i = 0; i < n; i++){
     if(A[i] > x) return 0;
-    if(sum + A[i] > x){
+    if(prev + A[i] > x){
       ++cnt;
-      sum = A[i];
+      prev = A[i];
     }else{
-      sum += A[i];
+      prev += A[i];
     }
   }
-  return cnt + 1 <= k;
+  return cnt <= k;
 
 }
 

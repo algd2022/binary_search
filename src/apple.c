@@ -5,9 +5,9 @@ int k;
 int A[100000];
 
 int possible(int x){
-  long int nes = 0;
-  for(int i = 0; i < n; i++) nes += (A[i] + x - 1) / x;
-  return nes <= k;
+  long int cnt = 0;
+  for(int i = 0; i < n; i++) cnt += (A[i] + x - 1) / x;
+  return cnt <= k;
 }
 
 int main(){

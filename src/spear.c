@@ -5,11 +5,11 @@ int k;
 int A[100000];
 
 int possible(int x){
-  long int nes = 0;
+  long int cnt = 0;
   for(int i = 0; i < n; i++){
-    nes += A[i] / x;
+    cnt += A[i] / x;
   }
-  return nes >= k;
+  return cnt >= k;
 }
 
 int main(){
