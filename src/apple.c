@@ -23,8 +23,12 @@ int main(){
   ub=1000000000+1;
   while(ub - lb > 1){
     int mid=(ub+lb)/2;
-    if(p(mid,n,k,A)) ub = mid;
-    else lb = mid;
+    if(p(mid,n,k,A)){
+      ub = mid;
+      }
+    else{
+      lb = mid;
+    }
   }
   printf("%d\n",ub);
 
