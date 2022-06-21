@@ -2,7 +2,6 @@
 
 int n;
 int k;
-int x;
 int A[100000];
 
 int p(unsigned int x){
