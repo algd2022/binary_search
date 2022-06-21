@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-int isOk(int A[], int n, int k, int x){
+int p(int x){
   int spears = 0;//長さをxにするとき作れる槍の総数
   for(int i = 0; i < n; i++){
     int S = A[i] / x;//1本の木から作れる槍の数
@@ -23,7 +23,7 @@ int main(){
   ub = 1e9 + 1;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
-    if(isOk(A, n, k, mid)){
+    if(p(mid)){
       lb = mid;
     }else{
       ub = mid;

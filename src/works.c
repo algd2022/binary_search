@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-int isOk(int A[], int n, int k, int x){//1人がする仕事量の最大値をx以下にできるか
+int p(int x){//1人がする仕事量の最大値をx以下にできるか
   int works = 0;
   int workers = 1;
   for(int i = 0; i < n; i++){
@@ -25,10 +25,10 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = 1e9 + 1;
+  ub = 1e9;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
-    if(isOk(A, n, k, mid)){
+    if(p(mid)){
       ub = mid;
     }else{
       lb = mid;
