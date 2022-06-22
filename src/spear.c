@@ -24,7 +24,8 @@ int main() {
     }
 
     lb = 0;
-    ub = 1000000000; // = 10^9, max length of wood
+    ub = 1000000001; /* = 10^9 + 1, max length of wood (if all A = 10^9 & k = 1,
+                        setting ub = 10^9 is bad) */
 
     // binery search
     while (ub - lb > 1) {
