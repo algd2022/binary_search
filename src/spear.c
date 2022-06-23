@@ -12,6 +12,26 @@ int main(){
     scanf("%d", &A[i]);
   }
 
+    lb = 0;
+    ub = 1000000000 - 1;
+    while(ub - lb > 1)
+    {
+        int mid = (lb + ub + 1) / 2;
+        int cnt = 0;
+        for(int i = 0; i < n; ++i)
+        {
+            cnt += A[i] / mid;
+        }
+        if(k <= cnt)
+        {
+            lb = mid;
+        }
+        else
+        {
+            ub = mid;
+        }
+    }
+    printf("%d\n", lb);
 
   return 0;
 }
