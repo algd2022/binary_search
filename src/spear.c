@@ -20,7 +20,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = 1e9;
+  ub = 1e9 + 1; /*1e9の長さの槍はギリギリ作れちゃう*/
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
     if(p(mid)){
