@@ -9,7 +9,7 @@ int p(int m){
   for(int i=0;i<n;i++){
     sum+=A[i]/m;
   }
-  if(sum<=k){
+  if(sum>=k){
     return 1;
   }
   return 0;
@@ -23,16 +23,16 @@ int main(){
   }
   //binary_search
   lb=0;
-  ub=1000000000;
+  ub=1000000001;
   while(ub-lb>1){
     int mid=(lb+ub)/2;
     if(p(mid)){
-      ub=mid;
-    }
-    else{
       lb=mid;
     }
+    else{
+      ub=mid;
+    }
   }
-  printf("%d\n",ub);
+  printf("%d\n",lb);
   return 0;
 }
