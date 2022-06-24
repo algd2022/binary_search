@@ -4,6 +4,9 @@ int n;
 int k;
 int A[100000];
 
+int d(int a){
+  return a >= k;
+}
 
 int main(){
   int i, lb, ub;
@@ -11,8 +14,17 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-
-
-
+  lb = -1;
+  ub = n;
+  int m = (lb + ub) / 2;
+  while(ub - lb > 1){
+    if(d(A[m])){
+      ub = m;
+    }
+    else{
+      lb = m;
+    }
+  }
+  printf("%d\n", ub);
   return 0;
 }
