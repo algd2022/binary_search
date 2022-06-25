@@ -5,10 +5,10 @@ int k;
 int A[100000];
 
 // (x時間以下の時間ずつ仕事量を分割したときの最小分割数) <= k を満たすとき p = 1 とする 
-int p(int a[], int x){
-  // 一番仕事量が多い人の仕事量は　(a[i]の最大値)　時間以上である
+int p(int x){
+  // 一番仕事量が多い人の仕事量は　(A[i]の最大値)　時間以上である
   for (int i = 0; i < n; i++){
-    if (a[i] > x)  return 0; 
+    if (A[i] > x)  return 0; 
   }
   
   // x時間以下の時間ずつ仕事量を分割したときの最小分割数を求める
@@ -19,9 +19,9 @@ int p(int a[], int x){
   b[0] = 0;
 
   for (int i = 0; i < n; i++){
-    sum += a[i];
+    sum += A[i];
     if (sum - b[count] > x){
-      b[++count] = sum - a[i];
+      b[++count] = sum - A[i];
     }
   }
 
@@ -40,7 +40,7 @@ int main(){
 
   while (ub - lb > 1) {
     int mid = (ub + lb) / 2;
-    if (p(A,mid))  ub = mid;
+    if (p(mid))  ub = mid;
     else lb = mid;
   }
 
