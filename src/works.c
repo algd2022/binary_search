@@ -44,7 +44,7 @@ int main(){
       lb = mid; //もっと大きなx(一人での最大仕事量)を探す
     }
   }
-printf("%d\n", ub);
+  printf("%d\n", ub);
 
-return 0;
+  return 0;
 }
