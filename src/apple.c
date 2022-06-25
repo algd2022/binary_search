@@ -8,8 +8,8 @@ int max(int *P){
   int res,i;
   res = 0;
   for(i=0;i<n;i++){
-    if (res<A[i]){
-      res=A[i];
+    if (res<P[i]){
+      res=P[i];
     }
   }
   return res;
