@@ -4,11 +4,10 @@ int n;
 int k;
 int A[100000];
 int p(int x){
-  int j;
-  int a;
-  a = 0;
-  for(j= 1; j <= n; j++){
-    a = a + (A[j] + x - 1) / x;
+  int i;
+  int a = 0;
+  for(i= 1; i <= n; i++){
+    a = a + (A[i] + x - 1) / x;
   }
   if(a <= k){
     return 1;
