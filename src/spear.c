@@ -22,7 +22,7 @@ int main(){
     while(ub - lb > 1){       //ub > lb+1の間以下を繰り返し
       int mid = (lb + ub) / 2;//領域中央値midの定義
       if(p(mid)){             //p(mid)が1であれば
-        lb = mid;             //領域上限lbをmidの値に指定　p()は単調非増加であることに留意
+        lb = mid;             //領域下限lbをmidの値に指定　p()は単調非増加であることに留意
       }
       else {                  //p(mid)が0であれば
         ub = mid;             //領域上限ubをmidの値に指定
