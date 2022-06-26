@@ -27,7 +27,7 @@ int main()
         scanf("%d", &A[i]);
     }
     lb = 0;
-    ub = 100000001;
+    ub = 1000000001;
     while (ub - lb > 1) {
         int mid = (lb + ub) / 2;
         if (can_carry(mid) == 1) {
