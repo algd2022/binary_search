@@ -25,7 +25,7 @@ int main(){
         ub = mid;                      //領域上限ubをmidの値に指定
       }
       else {                           //p(mid)が0であれば
-        lb = mid;                      //領域上限lbをmidの値に指定
+        lb = mid;                      //領域下限lbをmidの値に指定
     }
     }
   }
