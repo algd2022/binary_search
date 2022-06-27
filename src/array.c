@@ -6,6 +6,7 @@ int main()
   int k;
 
   scanf("%d%d", &n, &k);
+
   int A[n];
   for (int i = 0; i < n; i++)
   {
@@ -21,6 +22,7 @@ int main()
   int lb = 0, ub = n - 1;
   while (ub - lb > 1)
   {
+    printf("lb:%d\tub:%d\n", lb, ub);
     int cb = (ub + lb) / 2;
     if (A[cb] >= k)
     {
@@ -32,6 +34,19 @@ int main()
     }
   }
 
-  printf("%d\n", ub);
+  printf("lb:%d\tub:%d\n", lb, ub);
+
+  int ans;
+  if (lb > k)
+  {
+    ans = lb;
+  }
+  else
+  {
+    ans = ub;
+  }
+
+  printf("%d\n", ans);
+
   return 0;
 }
