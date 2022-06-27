@@ -4,6 +4,16 @@ int n;
 int k;
 int A[100000];
 
+int p(int x) {
+    if (x == 0) return 0;    //0‚ÅŠ„‚ç‚È‚¢‚½‚ß
+    int sum, i;
+    sum = 0;
+    for (i = 0; i < n; i++) {
+        sum = sum + (A[i] + x - 1) / x;
+    }
+    return sum <= k;
+}
+
 
 int main(){
   int i, lb, ub;
@@ -12,6 +22,20 @@ int main(){
     scanf("%d", &A[i]);
   }
 
+  lb = 0;
+  ub = 1000000000;
+
+  while (ub - lb > 1) {
+      int mid = (lb + ub) / 2;
+      if (p(mid)) {
+          ub = mid;
+      }
+      else {
+          lb = mid;
+      }
+  }
+
+  printf("%d\n", ub);
 
   return 0;
 }
