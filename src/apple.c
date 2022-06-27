@@ -7,7 +7,7 @@ int A[100000];
 int p(int x) {
 	int res = 0;
 	for (int i = 0; i < n; i++) {
-		res += (A[i] + x - 1) / x;
+	res += (A[i] + x - 1) / x;
 	}
 	return res <= k;
 }
