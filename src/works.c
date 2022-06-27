@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-
+/*わかりませんでした。*/
 int main(){
   int i, lb, ub;
   scanf("%d%d", &n, &k);
