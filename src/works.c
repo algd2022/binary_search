@@ -4,11 +4,6 @@ int n;
 int k;
 int A[100000];
 
-unsigned int max(int a, int b){
-  if(a>=b) return a;
-  else return b;
-}
-
 unsigned int check(int ones_work){
   int memo = ones_work, cnt = 0;
   for(int i = 0; i < k; i++){
@@ -34,14 +29,12 @@ int main(){
   int i, lb, ub;
   scanf("%d%d", &n, &k);
 
-  int ones_work = 0;
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
-    ones_work = max(ones_work, A[i]);
   }
 
   lb = 0;
-  ub = ones_work + 1;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
     if(check(mid)) ub = mid;
