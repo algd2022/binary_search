@@ -16,6 +16,7 @@ int work(int A[], int n, int k, int x){
       else{
 	timesum = 0;
 	count++;
+      }
     }
   }
   if(count >= k) return 0;
