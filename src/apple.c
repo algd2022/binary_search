@@ -5,6 +5,18 @@ int n;
 int k;
 int A[100000];
 
+bool is_bag_enough(int m) {
+  int sum_bag = 0;
+
+  for (int i = 0; i < n; i++) {
+    sum_bag += (A[i] - 1) / m + 1;
+    if (sum_bag > k) {
+      return false;
+    }
+  }
+  return true;
+}
+
 int main() {
   int i, lb, ub;
   scanf("%d%d", &n, &k);
@@ -18,21 +30,10 @@ int main() {
   while (ub > lb + 1) {
     int m = (lb + ub) / 2;
 
-    int sum_bag = 0;
-    bool is_over = false;
-
-    for (i = 0; i < n; i++) {
-      sum_bag += (A[i] - 1) / m + 1;
-      if (sum_bag > k) {
-        is_over = true;
-        break;
-      }
-    }
-
-    if (is_over) {
-      lb = m;
-    } else {
+    if (is_bag_enough(m)) {
       ub = m;
+    } else {
+      lb = m;
     }
   }
 
