@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-int work(x){
+int work(int x){
   int ammount = 0;
   int human = 0;
   for(int i = 0; i < n; i++){

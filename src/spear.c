@@ -4,7 +4,7 @@ int n;
 int k;
 int A[100000];
 
-int canNotMake(x){
+int canNotMake(int x){
   int ans = 0;
   for(int i = 0; i < n; i++){
     ans += A[i] / x;

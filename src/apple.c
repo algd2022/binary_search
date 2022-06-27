@@ -8,7 +8,7 @@ int div_ceil(int p, int q){
   return (p + q - 1) / q;
 }
 
-int canHave(x){
+int canHave(int x){
   int num_bag = 0;
   for(int i = 0; i < n; i++){
     num_bag += div_ceil(A[i], x);
