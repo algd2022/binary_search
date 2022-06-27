@@ -31,7 +31,7 @@ int main()
 
   lb = 0;
   ub = 1000000000;
-  while (ub - lb > 1)
+  while (ub > 1 + lb)
   {
     int mid = (ub + lb) / 2;
     if (p(mid))
