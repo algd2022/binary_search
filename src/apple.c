@@ -4,6 +4,14 @@ int n;
 int k;
 int A[100000];
 
+int p(int m){
+  int cnt = 0;
+  for(int i = 0; i < n; i++){
+    cnt += (A[i]+m-1)/m;
+  }
+  if(cnt <= k) return 1;
+  else return 0;
+}
 
 int main(){
   int i, lb, ub;
@@ -11,14 +19,14 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = -1;
-  ub = n;
+  lb = 0;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
-    if(A[mid] >= k){
+    if(p(mid)){
       ub = mid;
     }
-    else{
+    else {
       lb = mid;
     }
   }
