@@ -4,14 +4,46 @@ int n;
 int k;
 int A[100000];
 
+unsigned int p(int x)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++) 
+    {
+        sum += (A[i] + x - 1) / x;
+    }
 
-int main(){
-  int i, lb, ub;
-  scanf("%d%d", &n, &k);
-  for(i = 0; i < n; i++){
-    scanf("%d", &A[i]);
-  }
+    return sum <= k;
+}
 
+int main()
+{
+    int i;
+    int lb = 0;
+    int ub = -1;
+    scanf("%d%d", &n, &k);
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &A[i]);
+        if (ub < A[i]) 
+        {
+          ub = A[i];
+        }
+    }
+    while (ub - lb > 1) 
+    {
+        int mid = (lb + ub) / 2;
 
-  return 0;
+        if (p(mid))
+        {
+            ub = mid;
+        }
+        else
+        {
+         lb = mid;
+        }
+    }
+
+    printf("%d", ub);
+
+    return 0;
 }
