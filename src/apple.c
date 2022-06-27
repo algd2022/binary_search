@@ -53,7 +53,7 @@ int main(void){
     {
       lb = mid;
     }
+    
   printf("%d\n",lb);
-  }
   return 0;
 }
