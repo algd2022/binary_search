@@ -5,60 +5,69 @@ int k;
 int A[100000];
 int mid=0; //global変数
 int j=0;
-int bag_num=0;
+int tree_num = 0;
 int tmp=0;
 
-int bag_judge(int m){
+int tree_judge(int m){
   for(j=0;j<n;j++)
   {
-    scanf("%d", &A[j]);
-    bag_num += (A[j]+ m - 1) / m; //mがリンゴを何個入れるか
+    if(A[j] >= m)
+    { 
+      tree_num += A[j] / m; //切り上げないように
+    }
   }
+  tmp=tree_num;
+  tree_num=0;
   
-  tmp=bag_num;
-  bag_num=0;
-  //printf("%d\n",tmp);
-  
-  if(tmp <= k)
+  //printf("mid=%d,tmp=%d\n",m,tmp);
+  if(tmp < k)
   {
-      return  1;    
+      return 1;
   }
   else
   {
-      return  0; 
+      return 0;    
   }
+  //printf("tree_num=%d\n",tree_num);
 }
 
 
 int main(void){
-  int i,max,ub,lb;  
+  int i,max,ub,lb,sum_length = 0;  
   scanf("%d%d", &n, &k);
   
   for(i = 0; i < n; i++)
   {
     scanf("%d", &A[i]);
-    if(max < A[i])
-    {
-      max = A[i];
-      ub = A[i];
-    }
+    sum_length = sum_length + A[i];
+    //printf("%d\n",A[i]);
+    
   }
   
-  lb = 0; //maxは上で定義してある
+  ub = sum_length / k; 
+  lb = 0;
   
   
   while(ub - lb > 1)
   {
-    mid = (ub + lb)/2;
-    if(bag_judge(mid) == 1)
+    mid = (ub + lb) / 2;
+    //printf("mid=%d\n",mid);
+    if(tree_judge(mid) == 1)
     {
       ub = mid;
+      //printf("lb=%d,ub=%d\n",lb,ub);
     }
-    else if(bag_judge(mid) == 0) 
+    if(tree_judge(mid) == 0) 
     {
       lb = mid;
+     // printf("lb=%d,ub=%d\n",lb,ub);
+    }
+    if(k==0)
+    {
+      lb = 0;
     }
   }
-  printf("%d",ub);
+  //printf("%d\n",lb);
+  printf("%d",lb);
   return 0;
 }
