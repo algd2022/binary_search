@@ -5,14 +5,21 @@ int n;
 int k;
 int A[100000];
 
+unsigned int number_of_spear(int x){
+    int res = 0;
+    for (int t=0;t<n;t++){
+        res+=A[t]/x;
+    }
+    return  res;
+}
 
 unsigned int binary_search (int lb, int ub, int k){
-while (ub - lb > 1){
-int mid = (lb + ub ) / 2;
-if (A[ mid ] >= k) ub = mid ;
-else lb = mid ;
-}
-return ub ;
+    while (ub - lb > 1){
+        int mid = (lb + ub ) / 2;
+        if (number_of_spear(mid) >= k) lb = mid ;
+        else ub = mid ;
+        }
+    return lb ; // 少し変更
 }
 
 
