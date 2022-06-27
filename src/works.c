@@ -11,14 +11,15 @@ int work(int A[], int n, int k, int x){
     else{
       if(x - timesum >= A[i]){
 	timesum+=A[i];
-	count++;
         i++;
       }
-      else timesum = 0;
+      else{
+	timesum = 0;
+	count++;
     }
   }
-  if(count >= k) return 1;
-  return 0;
+  if(count >= k) return 0;
+  return 1;
 }
 
 int main(){
