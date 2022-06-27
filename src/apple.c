@@ -5,11 +5,11 @@ int k;
 int A[100000];
 
 int p(int x) {
-	int res = 0;
-	for (int i = 0; i < n; i++) {
-		res += (A[i] + x - 1) / x;
-	}
-	return res <= k;
+  int res = 0;
+  for (int i = 0; i < n; i++) {
+    res += (A[i] + x - 1) / x;
+  }
+  return res <= k;
 }
 
 int main(){
@@ -19,13 +19,13 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-	lb = 0;
-	ub = 1000000000;
-	while (ub - lb > 1) {
-		int mid = (lb + ub) / 2;
-		if (p(mid)) ub = mid;
-		else lb = mid;
-	}
-	printf("%d\n", ub);
+  lb = 0;
+  ub = 1000000000;
+  while (ub - lb > 1) {
+    int mid = (lb + ub) / 2;
+    if (p(mid)) ub = mid;
+    else lb = mid;
+  }
+  printf("%d\n", ub);
   return 0;
 }
