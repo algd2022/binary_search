@@ -4,6 +4,22 @@ int n;
 int k;
 int A[100000];
 
+int work(int A[], int n, int k, int x){
+  int i=0, count=0, timesum=0;
+  while(i<n){
+    if(A[i] > x) return 0;
+    else{
+      if(x - timesum >= A[i]){
+	timesum+=A[i];
+	count++;
+        i++;
+      }
+      else timesum = 0;
+    }
+  }
+  if(count >= k) return 1;
+  return 0;
+}
 
 int main(){
   int i, lb, ub;
@@ -12,6 +28,19 @@ int main(){
     scanf("%d", &A[i]);
   }
 
+  lb = 0;
+  ub = 1000000;
+  while(ub - lb > 1){
+    int mid = (lb + ub)/2;
+    if(work(A, n, k, mid)){
+    ub = mid;
+    }
+    else{
+    lb = mid;
+    }
+  }
+
+  printf("%u", ub);
 
   return 0;
 }
