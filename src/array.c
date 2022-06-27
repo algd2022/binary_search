@@ -15,12 +15,17 @@ return ub ;
 }
 
 int main(){
-    int i, ub, lb=0;
+    int i, ub, lb;
     scanf("%d%d", &n, &k);
     for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
     }
+    
+    
+    lb=0;
     ub=n;
+
+    
     int res=0;
     res = binary_search(lb, ub, k);
     printf("%d\n", res);
