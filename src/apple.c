@@ -7,9 +7,11 @@ int A[100000];
 int p(int x){
   int total = 0;
   int i;
-  for(i = 1; i <= n; i++){
+  for(i = 0; i < n; i++){
     total = total + (A[i] + x - 1) / x;
     }
+//一人当たりのバッグ数はA[i]/xを切り上げたもの。これらの総和がk
+//以下であればよい。
   if(total <= k){
 	return 1;
   }
