@@ -25,7 +25,7 @@ int main(){
     int able = 1;
 
     int mid = (lb + ub) / 2;
-    int work = 0, p = 0;
+    int work = 0, p = 1;
 
     for(i = 0; i < n; i++){
       if(A[i] > mid){
