@@ -5,23 +5,20 @@ int n;
 int k;
 int A[100000];
 
-unsigned int number_of_bag(int x){
-    int res = 0;
-    for (int t=0;t<n;t++){
-        res+=(A[t]+x-1)/x;
+unsigned int check(int x){
+    int 
+    for(int t=0;t<n;t++){
+
     }
-    return  res;
 }
 
 unsigned int binary_search (int lb, int ub, int k){
     while (ub - lb > 1){
         int mid = (lb + ub ) / 2;
-        if (number_of_bag(mid) <= k) ub = mid ;
+        if (check(mid)) ub = mid ;
         else lb = mid ;
             
-}
-    
-    
+}  
 return ub ;
 }
 
