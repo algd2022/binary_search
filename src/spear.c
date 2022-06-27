@@ -4,6 +4,10 @@ int n;
 int k;
 int A[100000];
 
+int p(int m,int a){
+  if(m >= a) return 1;
+  else return 0;
+}
 
 int main(){
   int i, lb, ub;
@@ -12,6 +16,18 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-
+  lb = 0;
+  ub = 1000000000;
+  /*bsearch*/
+  while (ub - lb > 1){
+    int mid = (lb + ub) / 2;
+    int sum = 0;
+    /*sum += floor(A[i]/mid)*/
+    for(i = 0; i < n; i++) sum += A[i] / mid;
+    if(p(sum,k)) lb = mid;
+    else ub = mid;
+  }
+  /*result*/
+  printf("%d\n", lb);
   return 0;
 }
