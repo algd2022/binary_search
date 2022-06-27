@@ -4,6 +4,22 @@ int n;
 int k;
 int A[100000];
 
+int p(int x){
+    int sum = 1,p = 0, m = 1;
+    for(int m=0; m < n; m++)
+        if(p + A[m]<=x){p = p + x;
+            
+        }
+        else if(x < A[m]){m = 0;
+            
+        }
+        else {p = A[m];
+            sum++;
+            
+        }
+
+return sum<=k && m ;
+}
 
 int main(){
   int i, lb, ub;
