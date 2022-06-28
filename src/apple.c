@@ -4,8 +4,8 @@ int n;
 int k;
 int A[100000];
 
-int p(int m, int a){
-  if (m <= a) return 1;
+int p(int m){
+  if (m <= k) return 1;
   else return 0;
 }
 int main(){
@@ -22,7 +22,7 @@ int main(){
     int sum = 0;
     /*sum += ceil(A[i]/mid)*/
     for(i = 0; i < n; i++) sum += (A[i] + mid - 1) / mid;
-    if(p(sum,k)) ub = mid;
+    if(p(sum)) ub = mid;
     else lb = mid;
   }
   /*result*/
