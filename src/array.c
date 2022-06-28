@@ -12,6 +12,20 @@ int main(){
     scanf("%d", &A[i]);
   }
 
+lb = -1;
+ub = n;
+int mid;
+
+while(ub - lb > 1){
+    mid = (lb + ub) / 2;
+    if (A[mid] >= k){
+      ub = mid;
+    }
+    else{
+      lb = mid;
+    }
+  }
+  printf("%d\n",ub);
 
 
   return 0;
