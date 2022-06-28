@@ -8,14 +8,9 @@ int p(int x){
   int i,sum;
   sum=0;
   for (i=0;i<n;i++){
-    sum +=(A[i]+x-1)/x;
+    sum +=(A[i] + x - 1)/x;
   }
-  if (sum <k){
-    return 0;
-  }
-  else {
-    return 1;
-  }
+  return sum <= k;
 }
 
 int main(){
