@@ -16,6 +16,7 @@ int main(){
   int siguma;
   while(ub - lb > 1) {
     int mid = (lb + ub) / 2;
+    siguma = 0;
     for(i = 1; i <=n; i++){
       siguma = siguma + A[i] / mid;
     }
