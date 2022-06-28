@@ -7,12 +7,19 @@ int A[100000];
 
 int main(){
   int i, lb, ub;
+  printf("n? k?\n");
   scanf("%d%d", &n, &k);
+  printf("A[i]?\n");
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-
-
-
+  lb = -1;
+  ub = n;
+  while(ub - lb > 1){
+    int mid = (lb + ub) / 2;
+    if(A[mid] >= k) ub = mid;
+    else lb = mid;
+  }
+  printf("x = %d\n",ub);
   return 0;
 }
