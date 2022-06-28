@@ -10,7 +10,6 @@ int p(int m, int *A){
   for (i = 0; i < n; i++){
     sum += A[i] / m;
   }
-  printf("%d %d\n", m , sum);
   return sum < k;
 }
 
