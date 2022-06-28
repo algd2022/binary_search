@@ -21,10 +21,10 @@ int main(){
       siguma = siguma + A[i] / mid;
     }
     if(siguma >= k){
-      ub = mid;
+      lb = mid;
     }
     else{
-      lb = mid;
+      ub = mid;
     }
   }
 
