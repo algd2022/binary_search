@@ -30,7 +30,7 @@ int main(){
 
   lb=sum/k;
   ub=sum-1;
-  while(ub-lb>1){
+  while((ub-lb)>1){
     mid=(lb+ub)/2;
     if(job[mid]==1){
       ub=mid;

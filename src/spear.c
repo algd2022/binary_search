@@ -28,7 +28,7 @@ int main(){
 
   lb=1;
   ub=sum;
-  while(ub-lb>1){
+  while((ub-lb)>1){
     mid=(lb+ub)/2;
     if(spear[mid]==0){
       ub=mid;

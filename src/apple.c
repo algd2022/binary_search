@@ -29,7 +29,7 @@ int main(){
 
   lb=1;
   ub=sum;
-  while(ub-lb>1){
+  while((ub-lb)>1){
     mid=(lb+ub)/2;
     if(apple[mid]==1){
       ub=mid;
