@@ -35,7 +35,7 @@ int main(){
   }
 
   lb = 0; // ng
-  ub = 100000000; // ok (10**9)
+  ub = 1e9; // ok (10**9 = max(n*max(a_i)))
 
   while (ub - lb > 1){
     int mid = (ub + lb) / 2;
