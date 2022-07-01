@@ -35,7 +35,7 @@ int main()
   {
     scanf("%d", &A[i]);
   }
-  lb = 0;
+  lb = -1;
   ub = n;
   int ans = bin_search(lb, ub);
   printf("%d", ans);

@@ -52,7 +52,7 @@ int main()
   }
   lb = 0;
   // 最大値は1e9(10^5時間,10^4の仕事を一人で行う場合)
-  ub = 1e9 + 1;
+  ub = 1e9;
   int ans = bin_search(lb, ub);
   printf("%d", ans);
   return 0;

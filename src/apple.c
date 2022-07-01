@@ -41,7 +41,7 @@ int main()
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = 1e9 + 1;
+  ub = 1e9;
   int ans = bin_search(lb, ub);
   printf("%d", ans);
   return 0;
