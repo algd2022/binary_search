@@ -11,7 +11,7 @@ int p(int m){
       if(A[i] % m != 0) ++sum;
   }
   if(sum <= k) return 1;
-  else return 0; 
+  else return 0;
 }
 
 int main(){
@@ -22,7 +22,7 @@ int main(){
   }
 
   lb = 0;
-  ub = 1e9+1;
+  ub = 1e9;
   while(ub -lb > 1){
     int mid = (ub - lb)/2 + lb;
 

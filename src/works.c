@@ -32,7 +32,7 @@ int main(){
   }
 
   lb = 0;
-  ub = 1e9+1;
+  ub = 1e9;
   while(ub - lb > 1){
     int mid = (ub - lb)/2 + lb;
     if(p(mid)) ub = mid;
