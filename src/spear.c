@@ -26,7 +26,7 @@ int main(){
     }
   }
 
-  lb=0;
+  lb=1;
   ub=sum;
   while(ub-lb>1){
     mid=(lb+ub)/2;
