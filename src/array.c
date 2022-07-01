@@ -11,7 +11,8 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  if(k < A[0] || A[n-1] < k) printf("%d\n",n);
+  if(A[n-1] < k) printf("%d\n",n);
+  else if(k < A[0]) printf("%d\n",A[0]);
   else{
     lb = -1;
     ub = n;
