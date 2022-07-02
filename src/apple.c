@@ -11,20 +11,19 @@ int p(int m){
     l += (A[i] / m);
     if(A[i] % m > 0){
       l += 1;
-    }
+    } 
     if(l > k) return 0;
   }
   return 1;
 }
 
 int main(){
-  int i, lb, ub, x;
-  lb = 1;
+  int i, lb, ub;
+  lb = 0;
   ub = 1000000000;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
-    if(A[i]>ub) ub = A[i];
   }
 
   while(ub - lb > 1){
@@ -37,11 +36,7 @@ int main(){
     }
   }
 
-  if(p(lb)){
-    printf("%d", lb);
-  }
-  else {
-    printf("%d", ub);
-  }
+  printf("%d", ub);
+
   return 0;
 }

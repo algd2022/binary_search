@@ -32,11 +32,7 @@ int main(){
     }
   }
 
-  if(p(ub)){
-    printf("%d", ub);
-  }
-  else {
-    printf("%d", lb);
-  }
+  printf("%d", lb);
+ 
   return 0;
 }
