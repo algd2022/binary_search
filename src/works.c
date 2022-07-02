@@ -13,7 +13,7 @@ int p(int m) {
     int workers = 1;
     int works = 0;
 
-    for (i = 1; i < n + 1; i++) {
+    for (i = 0; i < n ; i++) {
         if (works + A[i] <= m) { works += A[i]; } // 仕事量A[i]を追加しても,その人の仕事量がmを超えないならば,A[i]を追加する.
         else if (A[i] > m) { return 0; }      // これを記述しないと,A[i] > mとなるような仕事があった場合,workersが永遠に増えてしまう.
         else if (works + A[i] > m) {  // 仕事量A[i]を追加したとき,その人の仕事量がmを超えるならば,その人には割り当てず,
@@ -28,7 +28,7 @@ int p(int m) {
 int main() {
     int i, lb, ub;
     scanf("%d%d", &n, &k);
-    for (i = 1; i < n + 1; i++) {
+    for (i = 0; i < n ; i++) {
         scanf("%d", &A[i]);
     }
     // 最適化のため,lbは最大値,ubは最小値を選ぶ.
