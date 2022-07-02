@@ -6,7 +6,7 @@ int A[100000];
 int p(int x){
   int i;
   int a = 0;
-  for(i = 1; i < n; i++){
+  for(i = 0; i < n; i++){
     a = a + A[i] / x;
   }
   if(a >= k){
