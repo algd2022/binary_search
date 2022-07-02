@@ -28,7 +28,9 @@ int p(int m){
 	  sum = 0;
 	}
   }
-  count++;
+  if(sum>0){
+    count++;
+  }
   return count <= k;
 }
 
