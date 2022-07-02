@@ -12,8 +12,8 @@ int main() {
     for (i = 0; i < n; i++) {
         scanf("%d", &A[i]);
     }
-    lb = 0;
-    ub = 100000000 - 1;
+    lb = -1;
+    ub = 1000000001;
     while(ub - lb > 1){
         int num = 0;
         int mid = (lb + ub + 1) / 2;
