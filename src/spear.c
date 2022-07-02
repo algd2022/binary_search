@@ -18,20 +18,16 @@ int main()
 {
   int i;
   int lb = 0;
-  int ub = -1;
+  int ub = 1000000001;
 
   scanf("%d%d", &n, &k);
   for (i = 0; i < n; i++)
   {
     scanf("%d", &A[i]);
-    if (ub < A[i]) 
-    {
-        ub = A[i];
-    }
   }
 
 
-  while (ub - lb > 1)
+ while (ub - lb > 1)
   {
     int mid = (lb + ub) / 2;
 
