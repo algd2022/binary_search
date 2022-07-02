@@ -12,7 +12,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = 0;
+  lb = -1;//値の修正
   ub = n;
   /*bsearch*/
   while (ub - lb > 1){

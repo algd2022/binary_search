@@ -4,8 +4,13 @@ int n;
 int k;
 int A[100000];
 
-int p(int m){
-  if(m >= k) return 1;
+int p(int mid){
+  int sum = 0;
+  //長さ0の槍は常に作成可能
+  if(mid == 0) return 1;
+  /*sum += floor(A[i]/mid)*/
+  for(int i = 0; i < n; i++) sum += A[i] / mid;
+  if(sum >= k) return 1;
   else return 0;
 }
 
@@ -16,15 +21,12 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = 0;
+  lb = -1;//値の修正
   ub = 1000000000;
   /*bsearch*/
   while (ub - lb > 1){
     int mid = (lb + ub) / 2;
-    int sum = 0;
-    /*sum += floor(A[i]/mid)*/
-    for(i = 0; i < n; i++) sum += A[i] / mid;
-    if(p(sum)) lb = mid;
+    if(p(mid)) lb = mid;
     else ub = mid;
   }
   /*result*/
