@@ -4,7 +4,7 @@
 int n;
 int k;
 int A[100000];
-int B[100000];  // 累積和
+int B[100001];  // 累積和
 int k_2;
 
 int is_ok_2(int m) { return k_2 >= B[m]; }
