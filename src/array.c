@@ -5,7 +5,7 @@ int k;
 int A[100000];
 
 int p(int a) {
-    if (a > k) return 1;
+    if (a >= k) return 1;
     else return 0;
 }
 
