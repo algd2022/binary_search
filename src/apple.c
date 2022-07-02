@@ -14,19 +14,13 @@ int p(int m){
 }
 
 int main(){
-  int i, lb, ub,max;
+  int i, lb, ub;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  max = A[0];
-  for(i = 0;i < n;i++){
-    if(max < A[i]){
-      max = A[i];
-    }
-  }
   lb = 0;
-  ub = max + 1;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
     if(p(mid)){
