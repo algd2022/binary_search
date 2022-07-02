@@ -8,7 +8,7 @@ int can_make(int x)
 {
     int makeable_spear_number = 0;
     int i = 0;
-    while (i <= n) {
+    while (i < n) {
         makeable_spear_number += A[i] / x;
         i++;
     }
