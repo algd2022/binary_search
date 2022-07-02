@@ -11,12 +11,12 @@ void Num_printing(int i);
 int main()
 {
   int i, lb = 0, ub = 0;
-  printf("Enter n and k:\n");
+  // printf("Enter n and k:\n");
   scanf("%d%d", &n, &k);
-  printf("Check the value:n=%d, k=%d\n", n, k);
+  // printf("Check the value:n=%d, k=%d\n", n, k);
   for (i = 0; i < n; ++i)
   {
-    Num_printing(i + 1);
+    // Num_printing(i + 1);
     scanf("%d", &A[i]);
     ub += A[i];
   }
@@ -37,7 +37,7 @@ int main()
     }
   }
 
-  printf("Output Number:%d\n", ub);
+  printf("%d\n", ub);
   return 0;
 }
 
@@ -53,16 +53,16 @@ bool p(int x)
       // printf("big false\n");
       return false;
     }
-    if (i == n - 1)
+    if (i >= n - 1)
     {
       break;
     }
     while (1)
     {
       temp -= A[i];
-      // printf("roop1(temp=%d,i=%d)\n", temp, i);
+      // printf("roop1(temp=%d,i=%d,count=%d)\n", temp, i, count);
       ++i;
-      if (temp < A[i])
+      if (temp < A[i] || i >= n)
       {
         break;
       }
