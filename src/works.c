@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int n = 3;
-int k = 2;
-int A[3] = {1, 4, 2};
+int n;
+int k;
+int A[100000];
 
 int can_distribute(int max_work_amount)
 {
