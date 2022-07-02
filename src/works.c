@@ -30,7 +30,7 @@ int main(){
     scanf("%d", &A[i]);
   }
    lb = 0 ;    /*0<xより*/
-  ub = n*10000+1;  /*1<=A[i]<=10^4より*/
+  ub = 1e9;
   while(ub - lb>1){
   int mid = (lb + ub) / 2;
   if (p(mid)){
