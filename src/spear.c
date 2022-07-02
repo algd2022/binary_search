@@ -11,7 +11,7 @@ int A[100000];
 int p(int m) {
     int i;
     int sum = 0;
-    for (i = 1; i < n + 1; i++) {
+    for (i = 0; i < n ; i++) {
         sum += A[i] / m;
     }
     if (sum >= k) return 0; //単調非減少にするため
@@ -21,7 +21,7 @@ int p(int m) {
 int main() {
     int i, lb, ub;
     scanf("%d%d", &n, &k);
-    for (i = 1; i < n + 1; i++) {
+    for (i = 0; i < n ; i++) {
         scanf("%d", &A[i]);
     }
     // 最適化のため,lbは最大値,ubは最小値を選ぶ.
