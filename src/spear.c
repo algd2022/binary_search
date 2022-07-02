@@ -10,7 +10,7 @@ void Num_printing(int i);
 
 int main()
 {
-  int i, lb = 0, ub = 1000000000;
+  int i, lb = 0, ub = 0;
   printf("Enter n and k:\n");
   scanf("%d%d", &n, &k);
   printf("Check the value:n=%d, k=%d\n", n, k);
@@ -18,6 +18,10 @@ int main()
   {
     Num_printing(i + 1);
     scanf("%d", &A[i]);
+    if (ub < A[i])
+    {
+      ub = A[i] + 1;
+    }
   }
 
   while (ub - lb > 1)
