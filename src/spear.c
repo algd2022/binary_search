@@ -19,20 +19,15 @@ int p(int l){
 }
 
 
-//求めたいのはp(l)=0なる最大のl，すなわち(p(l)=1なる最小のl)-1である．
-//よってarray.cやapple.cのように
-//lb=(lの取りうる最小値)-1
-//ub=(lの取りうる最大値)
-//とおいて，ub-1=lbを返せばよい．
 int main(){
   int i, lb, ub;
   scanf("%d%d", &n, &k);
   for(i=0; i<n; i++){
     scanf("%d", &A[i]);
   }
-  
+ 
   lb = 0;
-  ub = 1e9;
+  ub = 1e9+1;
   while(ub-lb>1){
     int mid = (lb+ub)/2;
     if(p(mid)){
@@ -41,7 +36,7 @@ int main(){
       lb = mid;
     }
   }
-  
+
   printf("%d\n",lb);
   return 0;
 }
