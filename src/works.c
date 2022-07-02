@@ -2,7 +2,7 @@
 
 int n;
 int k;
-int A[100000];
+int A[100010];
 
 int max(int a, int b)
 {
