@@ -4,13 +4,6 @@ int n;
 int k;
 int A[100000];
 
-int sum(int *A){
-  int s = 0;
-  for(int i = 0; i < n; i++){
-    s += A[i];
-  }
-  return s;
-}
 int p(int x){
   int total = 0;
   for(int i = 0; i < n; i++){
@@ -29,7 +22,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = sum(A) / k;
+  ub = 1e9+1;
   while (ub-lb>1){
     int mid = (ub+lb)/2;
     if (p(mid)==1){
