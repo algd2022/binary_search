@@ -8,7 +8,7 @@ int can_carry(int x)
 {
     int nessesary_bagnumber = 0;
     int i = 0;
-    while (i <= n) {
+    while (i < n) {
         nessesary_bagnumber += (A[i] + x - 1) / x;
         i++;
     }
