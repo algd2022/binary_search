@@ -11,12 +11,12 @@ void Num_printing(int i);
 int main()
 {
   int i, lb = 0, ub = 0;
-  printf("Enter n and k:\n");
+  // printf("Enter n and k:\n");
   scanf("%d%d", &n, &k);
-  printf("Check the value:n=%d, k=%d\n", n, k);
+  // printf("Check the value:n=%d, k=%d\n", n, k);
   for (i = 0; i < n; ++i)
   {
-    Num_printing(i + 1);
+    //Num_printing(i + 1);
     scanf("%d", &A[i]);
     if (ub < A[i])
     {
@@ -40,7 +40,7 @@ int main()
     }
   }
 
-  printf("Output Number:%d\n", lb);
+  printf("%d\n", lb);
   return 0;
 }
 
