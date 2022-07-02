@@ -10,7 +10,7 @@ int p(int m){
   for(i = 0; i < n; i++){
     sum += (A[i] + m - 1) / m;
   }
-  return sum >= k;
+  return sum <= k;
 }
 
 int main(){
@@ -20,19 +20,19 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = 1;
-  ub = 1000000001;
+  lb = 0;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
     if(p(mid)){
-      lb = mid;
+      ub = mid;
     }
     else{
-      ub = mid;
+      lb = mid;
     }
   }
 
-  printf("%d\n", lb);
+  printf("%d\n", ub);
 
   return 0;
 }
