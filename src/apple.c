@@ -9,7 +9,7 @@ int A[100000];
 int p(int m) {            //mはバッグに入れることができるりんごの数とする.
     int i;
     int sum = 0;
-    for (i = 1; i < n + 1; i++) {
+    for (i = 0; i < n ; i++) {
         sum += (A[i] + m - 1) / m;
     }
     if (sum <= k) return 1;
@@ -19,7 +19,7 @@ int p(int m) {            //mはバッグに入れることができるりんごの数とする.
 int main() {
     int i, lb, ub;
     scanf("%d%d", &n, &k);
-    for (i = 1; i < n + 1; i++) {
+    for (i = 0; i < n ; i++) {
         scanf("%d", &A[i]);
     }
     // lbは最大値,ubは最小値を選ぶ.
