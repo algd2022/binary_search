@@ -19,7 +19,7 @@ unsigned int p(unsigned int x) {
 
 int main() {
   unsigned int lb = 0;
-  unsigned int ub = 1000000001;
+  unsigned int ub = 1000000000;
 
   scanf("%d%d", &n, &k);
   for(unsigned int i = 0; i < n; i++){

@@ -27,7 +27,7 @@ int main() {
 
   int lb, ub;
   lb = 0;
-  ub = 1000000001;
+  ub = 1000000000;
   while(ub - lb > 1) {
     unsigned int mid = (lb + ub) / 2;
     unsigned int bags = p(mid);
