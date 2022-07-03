@@ -4,6 +4,12 @@ int n;
 int k;
 int A[100000];
 
+int worktimesum(int A[], int n){
+  int i, sum=0;
+  for(i=0; i<n; i++) sum+=A[i];
+  return sum;
+}
+
 int work(int A[], int n, int k, int x){
   int i=0, count=0, timesum=0;
   while(i<n){
@@ -31,7 +37,7 @@ int main(){
   }
 
   lb = 0;
-  ub = 1000000;
+  ub = worktimesum(A, n);
   while(ub - lb > 1){
     int mid = (lb + ub)/2;
     if(work(A, n, k, mid)){
