@@ -14,16 +14,8 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  if (A[0] >= k) {
-    printf("0\n");
-    return 0;
-  }
-  if (A[n - 1] < k) {
-    printf("%d\n", n);
-    return 0;
-  }
-  lb = 0;
-  ub = n - 1;
+  lb = -1;
+  ub = n;
   while (ub - lb > 1) {
     int mid = (lb + ub) / 2;
     if (p(mid)) {
