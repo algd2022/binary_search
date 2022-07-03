@@ -5,46 +5,46 @@ int k;
 int A[100000];
 
 
+int p(int x) {
+    int sum = 0;
+
+    //あるxについて作成可能なやりの数を計算
+    for (int i = 0; i < n; i++) {
+        sum += A[i] / x;
+    }
+
+    if (sum >= k) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
 int main(){
-    int i, lb = 1, ub = 1000;
+    int i, lb = 0, ub = 1;
 
     //項数n　と　要素k　の入力
-    printf("input 'n' 'k'\n");
     scanf("%d%d", &n, &k);
 
+    //数列A[i]を入力
     for(i = 0; i < n; i++){
-        printf("input number %d/%d :", i + 1, n);
         scanf("%d", &A[i]);
-        if (ub > A[i])ub = A[i];
+        if (ub < A[i])ub = A[i];
     }
-    printf("lb=%d,ub=%d\n", lb, ub);
-    printf("input finished\n");
-    
 
-    int m = 0, x = ub,sum =0;
+    int mid = 0;
 
     while (ub - lb > 1) {
-        m += 1;
-        x = (ub + lb) / 2;
-        sum = 0;
-
-        //本数を計算、sum<kの時不十分なのでxを小さく(ubを小さく)する。
-
-        for (i = 0; i < n; i++) {
-            sum += (A[i] + x - 1) / x;
+        mid = (ub + lb) / 2;
+        if (p(mid)) {
+            lb = mid;
         }
-        if (sum < k)ub = x;
-        else lb = x;
-
-        printf("lb:%d,ub:%d,sum:%d\n", lb, ub, sum);
-
-        m += 1;
-        if (m > 100) {
-            printf("over");
-            break;
+        else {
+            ub = mid;
         }
     }
 
-    printf("Answer:%d\n", ub);
-      return 0;
+    printf("%d\n", lb);
+    return 0;
 }
