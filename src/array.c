@@ -14,11 +14,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = -1;
-  ub = n-1;
-  if(p(A[ub]) == 0){
-    printf("%d\n", n);
-    return 0;
-  }
+  ub = n;
   while(ub-lb > 1){
     int mid = (lb + ub)/2;
     if(p(A[mid])){
