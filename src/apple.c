@@ -13,7 +13,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = 1;
+  lb = 0;
   ub = 1000000000;
   while(ub-lb>1){
     int mid = (lb+ub)/2;
