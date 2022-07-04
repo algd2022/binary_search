@@ -4,6 +4,17 @@ int n;
 int k;
 int A[100000];
 
+unsigned int p(int x)
+{
+  int sum = 0;
+  for (int i = 0; i < n; i++)
+  {
+    sum += (A[i] + x - 1) / x;
+  }
+
+  return sum <= k;
+}
+
 int main()
 {
   int i;
@@ -30,15 +41,4 @@ int main()
   printf("%d", ub);
 
   return 0;
-}
-
-unsigned int p(int x)
-{
-  int sum = 0;
-  for (int i = 0; i < n; i++)
-  {
-    sum += (A[i] + x - 1) / x;
-  }
-
-  return sum <= k;
 }
