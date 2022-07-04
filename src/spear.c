@@ -19,8 +19,8 @@ int main(){
     for(i = 0; i < n; i++){
         scanf("%d", &A[i]);
     }
-    lb = 999999999;
-    ub = 1;
+    lb = 1000000001;
+    ub = 0;
     while(lb - ub > 1){
         int mid = (lb + ub)/2;
         if(k <= sum(A,mid,n)) ub = mid;
