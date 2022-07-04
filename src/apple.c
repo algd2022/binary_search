@@ -24,7 +24,7 @@ int main()
     scanf("%d", &A[i]);
   }
 
-  int lb = -1;
+  int lb = 0;
   int ub = 100000000;
 
   while (ub - lb > 1)
