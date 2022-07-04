@@ -20,12 +20,8 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = 1;
+  lb = 0;
   ub = 1000000000;
-  if (check(lb)) {
-    printf("%d\n", lb);
-    return 0;
-  }
   while (ub - lb > 1) {
     int mid = (lb + ub) / 2;
     if (check(mid)) {
