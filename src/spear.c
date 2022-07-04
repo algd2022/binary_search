@@ -22,7 +22,7 @@ int main(){
 
 int mid;
 lb = 0;
-ub = 1000000000 + 1；
+ub = 1000000000 + 1;
 while (ub - lb > 1) {
     mid = (lb + ub) / 2;
     if (p(mid)){
