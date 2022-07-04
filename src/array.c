@@ -22,8 +22,8 @@ int main(){
     }
     
     
-    lb=0;
-    ub=n;
+    lb=-1;
+    ub=n+1;
 
 
     int res=0;
