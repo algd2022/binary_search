@@ -16,12 +16,13 @@ int max(int n, int A[]) {
 unsigned int p(int x, int A[]){
   int i, j, l, sum, B[k];
   l = 0;
-  sum = 0;
   for(i = 0; i < k; i++){
+     sum = 0;
      for(j = l; j < n-k+i+1; j++){
-       if(sum + A[j] <= x)
-          sum += A[j];
-       else break;
+       sum + A[j]
+       if(sum >= x && i < k-1){
+         break;
+       }
      }
      B[i] = sum;
      l = j + 1;
