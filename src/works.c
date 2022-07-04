@@ -4,18 +4,6 @@ int n;
 int k;
 int A[100000];
 
-int sum()
-{
-  int ret = 0;
-
-  for (int i = 0; i < n; i++)
-  {
-    ret += A[i];
-  }
-
-  return ret;
-}
-
 int p(int x)
 {
   int num = 0;
@@ -52,7 +40,7 @@ int main()
   }
 
   lb = 0;
-  ub = sum();
+  ub = 1000000000;
 
   int mid = (lb + ub) / 2;
 

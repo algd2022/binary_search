@@ -13,7 +13,7 @@ int main()
     scanf("%d", &A[i]);
   }
 
-  lb = 0;
+  lb = -1;
   ub = n;
 
   int mid = (lb + ub) / 2;

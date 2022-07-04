@@ -4,37 +4,6 @@ int n;
 int k;
 int A[100000];
 
-int ceiling(double x)
-{
-  if (x == (int)x)
-  {
-    return x;
-  }
-  else
-  {
-    return ((int)x + 1);
-  }
-}
-
-int max()
-{
-  int max_p = 0;
-  for (int i = 0; i < n; i++)
-  {
-    if (A[i] > max_p)
-    {
-      max_p = A[i];
-    }
-  }
-
-  return max_p;
-}
-
-int sup_about()
-{
-  return ceiling((double)max() / ((int)k / n));
-}
-
 int p(int x)
 {
   int sum = 0;
@@ -43,7 +12,7 @@ int p(int x)
     sum += (int)(A[i] / x);
   }
 
-  return (k <= sum);
+  return (k < sum);
 }
 
 int main()
@@ -56,7 +25,7 @@ int main()
   }
 
   lb = 0;
-  ub = sup_about();
+  ub = 1000000001;
 
   int mid = (lb + ub) / 2;
 
