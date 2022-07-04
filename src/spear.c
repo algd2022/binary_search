@@ -17,7 +17,7 @@ unsigned int p(int x, int A[]){
   for(i = 0; i < n; i++){
     sum += A[i] / x;
   }
-  return sum >= k;
+  return sum < k;
 }
 
 int main(){
@@ -27,7 +27,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = -1;
+  lb = 0;
   ub = max(n, A);
   while(ub - lb > 1) {
     int mid = (lb + ub) / 2;
@@ -38,6 +38,6 @@ int main(){
       lb = mid;
     }
   }
-  printf("%d\n", ub);
+  printf("%d\n", lb);
   return 0;
 }
