@@ -25,16 +25,12 @@ int m(unsigned int B[]){
 
 //人の入れ替わりがk-1回起こるようにする
 int p(int m){
-  int sum = 0;
   int people = 1;
-  for(int a = 0; a < n; a++){
-    //a=0から足すだけだとｍの最小値が求まらないため、
-    //0からn-1まで全てを出発点にする必要がある。
-    sum += A[a];
-    if(sum > m){
-      sum = 0;
-      people++;
+  for(int a = 0; a < n-1; a++){
+    if(A[a] + A[a+1] <= m){
+      A[a+1] = A[a] + A[a+1];
     }
+    else people++;
   }
   return (long long int) people <= k;
 }
