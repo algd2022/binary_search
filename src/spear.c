@@ -24,6 +24,7 @@ int main(){
   for(i = 0; i < n; i++){
     if (A[i] > ub) ub = A[i];
   }
+  ub = ub + 1;
 
   while (ub - lb > 1) {
     int mid = (lb + ub) / 2;
