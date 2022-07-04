@@ -20,18 +20,14 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-int mid;
-lb = 0;
-ub = 1000000000 + 1;
-while (ub - lb > 1) {
+  int mid;
+  lb = 0;
+  ub = 1000000000 + 1;
+  while (ub - lb > 1) {
     mid = (lb + ub) / 2;
-    if (p(mid)){
-      lb = mid;
-    }
-    else{
-      ub = mid;
-    }
+    if (p(mid)) lb = mid;
+    else ub = mid;
   }
-  printf("%d\n", ub);
+  printf("%d", lb);
   return 0;
-} 
+}
