@@ -16,7 +16,7 @@ int main()
 
   // ub->仕事を割り振れる最小のx
   // lb->仕事を割り振れない最大のx
-  ub = (int)1E9 + 1;
+  ub = (int)1E9;
   lb = 0;
   while (ub > lb + 1)
   {
