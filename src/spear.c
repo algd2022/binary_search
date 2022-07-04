@@ -29,14 +29,15 @@ int p (int A[], int x, int n, int k){
 }
 
 int main(){
-  int i, lb, ub;
+  int i, lb;
+  long long ub;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
 
   lb = 0;
-  ub = max1(k, A);
+  ub = pow(10, 9) + 1;
   //printf("ub= %d\n", ub);
 
   while(ub - lb > 1) {
