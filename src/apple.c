@@ -23,10 +23,10 @@ int main(){
   while(ub - lb > 1) {
     int mid = (lb + ub) / 2;
     if(p(mid)){
-      lb = mid;
+      ub = mid;
     }
     else{
-      ub = mid;
+      lb = mid;
     }
   }
   printf("%d\n", ub);
