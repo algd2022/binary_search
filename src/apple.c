@@ -9,7 +9,7 @@ int p(int m){
   for (int i = 0; i < n; i++){
     sum = sum + (A[i] + m - 1) / m;
   } 
-  return sum >= k;
+  return sum <= k;
 }
 
 int main(){
