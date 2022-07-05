@@ -7,20 +7,21 @@ int A[100000];
 int dw(int x){
   int pc = 0;
   int i = 0;
-  while (pc <= k && i != n - 1){
-    int wc = 0;
-    while (wc <= x && i < n){
+  int wc;
+  while (pc < k && i < n){
+    wc = 0;
+    while (wc <= x && i <= n-1){
       wc = wc + A[i];
       i = i + 1;
     }
     i = i - 1;
     pc = pc + 1;
   }
-  if(i == n - 1){
-    return 1;
-  }
-  else if (pc > k){
+  if (pc == k && wc > x){
     return 0;
+  }
+  else{
+    return 1;
   }
 }
 
@@ -32,8 +33,8 @@ int main(){
   }
   ub = 10000 * n;
   lb = 0;
-  int m = (ub + lb)/2;
   while (ub - lb > 1){
+    int m = (ub + lb)/2;
     if (dw(m)){
       ub = m;
     }

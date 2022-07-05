@@ -20,9 +20,9 @@ int main(){
   }
   lb = -1;
   ub = 1000000000+1;
-  int m = (lb + ub)/2;
   while (ub - lb > 1){
-    if(sumbag(m)){
+    int m = (lb + ub)/2;
+    if(dbag(m)){
       ub = m;
     }
     else{

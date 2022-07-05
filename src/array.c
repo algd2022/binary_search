@@ -16,8 +16,8 @@ int main(){
   }
   lb = -1;
   ub = n;
-  int m = (lb + ub) / 2;
   while(ub - lb > 1){
+    int m = (lb + ub) / 2;
     if(d(A[m])){
       ub = m;
     }
