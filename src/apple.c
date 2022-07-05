@@ -9,7 +9,7 @@ int p(int m){
   for (int i = 0; i < n; i++){
     sum = sum + (A[i] + m - 1) / m;
   } 
-  return sum <= k;
+  return sum >= k;
 }
 
 int main(){
@@ -23,10 +23,10 @@ int main(){
   while(ub - lb > 1) {
     int mid = (lb + ub) / 2;
     if(p(mid)){
-      ub = mid;
+      lb = mid;
     }
     else{
-      lb = mid;
+      ub = mid;
     }
   }
   printf("%d\n", ub);
