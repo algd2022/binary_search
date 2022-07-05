@@ -12,14 +12,16 @@ int total(int x){
   for(int i = 0; i < n; i++){
     if(A[i] > x) {
       return 0; 
-    }else if (As_whole += A[i] <= x){
+    }
+    else if (As_whole + A[i] <= x){
        As_whole += A[i]; 
-    }else{
+    }
+    else{
       how_many += 1; 
       As_whole = A[i];
     }
   }
-  return how_many <= k;
+ return how_many <= k;
 } 
 
 
@@ -32,10 +34,14 @@ int main(){
     scanf("%d", &A[i]);
   }
   
-  while(ub - lb > 1){
+  while (ub - lb > 1){
     int mid = (lb + ub) / 2;
-    if (total(mid)) ub = mid;
-    else lb = mid;
+    if (total(mid)){
+     ub = mid;
+    }
+    else {
+     lb = mid;
+    }
   }
   printf("%d\n", ub);
   return 0;
