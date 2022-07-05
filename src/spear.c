@@ -9,7 +9,7 @@ int p(int m){
   for(int i = 0; i < n; i++){
     sum = sum + A[i] / m;
   }
-  return sum <= k;
+  return sum < k;
 }
 
 int main(){
@@ -29,7 +29,7 @@ int main(){
       lb = mid;
     }
   }
-  printf("%d\n", ub);
+  printf("%d\n", lb);
 
   return 0;
 }
