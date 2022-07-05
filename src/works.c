@@ -5,25 +5,20 @@ int k;
 int A[100000];
 
 int p(int x){
-  int count = 0;
+  int count = 1;
   int sum = 0;
   for(int j=0 ;j<n ;j++){
-    if(A[j] <= x){
-      sum += A[j];
-      if(sum > x){
-        sum = A[j];
-        count++;
-      }
-      else if(sum == x){
-        sum = 0;
-        count++;
-      }
-    }
-    else{
+    if(A[j] > x){
       return 0;
     }
+    if(A[j] + sum > x){
+      sum = A[j];
+      count++;
+    }
+    else{
+      sum += A[j];
+    }
   }
-  count++;
   return count <= k;
 }
 int main(){

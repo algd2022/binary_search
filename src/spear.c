@@ -13,14 +13,14 @@ int p(int x){
 }
 
 int main(){
-  int i, lb, ub;
+  int i,　lb, ub;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
 
   lb = 0;
-  ub = 1e9;
+  ub = 1000000001;
   while(ub - lb > 1){
     int mid = (ub + lb)/2;
     if(p(mid)){
