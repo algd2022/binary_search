@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+
+//更新：初期値を変更しました。
+
 int n;
 int k;
 int A[100000];
@@ -19,7 +22,7 @@ int main(){
     scanf("%d", &A[i]);
   }
    lb = 0;
-  ub = 1000000000;
+  ub = 1000000001;
   while(ub - lb >1){
     int mid = (lb + ub ) / 2;
     if(p(n,k,mid,A)) ub = mid;
