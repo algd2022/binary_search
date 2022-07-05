@@ -10,11 +10,11 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = 0;
+  lb = -1;
   ub = n;
   while(ub - lb > 1){
     now_index = (lb + ub) / 2;
-    if(A[now_index] > k){
+    if(A[now_index] >= k){
       ub = now_index;
     }else{
       lb = now_index;

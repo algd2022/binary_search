@@ -19,7 +19,7 @@ bool can(int x) {
 }
 
 int main() {
-    int i, lb = 0, ub = pow(10, 9), mid;
+    int i, lb = 0, ub = pow(10, 9)+1, mid;
     scanf("%d%d", &n, &k);
     for (i = 0; i < n; i++) {
         scanf("%d", &A[i]);
