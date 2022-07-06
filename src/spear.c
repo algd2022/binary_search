@@ -20,7 +20,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   int min=0;
-  int max=1000000000;//10^9
+  int max=1000000001;//10^9+1
   int mid;
   while(max-min>1){ //bsearch
     mid=(min+max)/2;
