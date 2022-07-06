@@ -25,13 +25,7 @@ int main()
     scanf("%d", &A[i]);
   }
 
-  if (SumSpear(1) < k)
-  {
-    printf("%d\n", 0);
-    return 0;
-  }
-
-  int lb = 1, ub = 1e9;
+  int lb = 0, ub = 1e9;
 
   while (ub - lb > 1)
   {
@@ -46,18 +40,7 @@ int main()
     }
   }
 
-  int ans;
-
-  if (SumSpear(ub) < k)
-  {
-    ans = lb;
-  }
-  else
-  {
-    ans = ub;
-  }
-
-  printf("%d\n", ans);
+  printf("%d\n", lb);
 
   return 0;
 }

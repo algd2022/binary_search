@@ -13,16 +13,9 @@ int main()
     scanf("%d", &A[i]);
   }
 
-  if (A[n - 1] < k)
-  {
-    printf("%d\n", n);
-    return 0;
-  }
-
-  int lb = 0, ub = n - 1;
+  int lb = -1, ub = n;
   while (ub - lb > 1)
   {
-    printf("lb:%d\tub:%d\n", lb, ub);
     int cb = (ub + lb) / 2;
     if (A[cb] >= k)
     {
@@ -34,19 +27,7 @@ int main()
     }
   }
 
-  printf("lb:%d\tub:%d\n", lb, ub);
-
-  int ans;
-  if (lb > k)
-  {
-    ans = lb;
-  }
-  else
-  {
-    ans = ub;
-  }
-
-  printf("%d\n", ans);
+  printf("%d\n", ub);
 
   return 0;
 }

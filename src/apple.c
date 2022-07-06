@@ -32,33 +32,22 @@ int main()
     scanf("%d", &A[i]);
   }
 
-  int lb = 1, ub = 1e9;
+  int lb = 0, ub = 1e9;
 
   while (ub - lb > 1)
   {
     int cb = (lb + ub) / 2;
-    if (CountBagsNeed(cb) >= k)
-    {
-      lb = cb;
-    }
-    else
+    if (CountBagsNeed(cb) <= k)
     {
       ub = cb;
     }
+    else
+    {
+      lb = cb;
+    }
   }
 
-  int ans;
-
-  if (CountBagsNeed(lb) > k)
-  {
-    ans = ub;
-  }
-  else
-  {
-    ans = lb;
-  }
-
-  printf("%d\n", ans);
+  printf("%d\n", ub);
 
   return 0;
 }
