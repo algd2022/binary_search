@@ -3,35 +3,31 @@
 int n;
 int k;
 int A[100000];
-
+int apple(int x){//if storage of bag=x
+  int sub_k=k,j;
+  for(j=0;j<n;j++){
+    sub_k-=(A[j]+x-1)/x;//round up A[j]/x
+  }
+  if(sub_k>=0){
+    return 1;
+  }
+  else{
+    return 0;
+  }
+}
 
 int main(){
-  int i,j,sum=0,sub_k, lb, ub,mid;
-  int apple[100000];//apple[i]=1--if strage of bag=i,succeed
+  int i, lb, ub,mid;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
-    sum+=A[i];
   }
 
-  for(i=1;i<=sum;i++){
-    sub_k=k;
-    for(j=0;j<n;j++){
-      sub_k-=(A[j]+i-1)/i;//round up A[i]/i
-    }
-    if(sub_k>=0){
-      apple[i]=1;
-    }
-    else{
-      apple[i]=0;
-    }
-  }
-
-  lb=1;
-  ub=sum;
+  lb=0;
+  ub=1000000000;
   while((ub-lb)>1){
     mid=(lb+ub)/2;
-    if(apple[mid]==1){
+    if(apple(mid)==1){
       ub=mid;
     }
     else{
