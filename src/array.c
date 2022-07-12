@@ -12,7 +12,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   if(A[n-1] < k) printf("%d\n",n);
-  else if(k < A[0]) printf("%d\n",A[0]);
+  else if(k <= A[0]) printf("0\n");
   else{
     lb = -1;
     ub = n;
