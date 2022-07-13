@@ -13,7 +13,7 @@ int p (int hold){// means if one bag can hold (hold) apples, how many(bag) bag s
 }
 
 int main(){
-  int i, lb=0, ub=100000;
+  int i, lb=0, ub=1000000000;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);

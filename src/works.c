@@ -27,7 +27,7 @@ int p (int m){// means if they want to create m cm's spear, how many (spear) spe
 
 
 int main(){
-  int i, lb=0, ub=100000;
+  int i, lb=0, ub=10000;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
