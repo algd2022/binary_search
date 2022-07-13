@@ -11,7 +11,7 @@ int main() {
     for (i = 0; i < n; i++) {
         scanf("%d", &A[i]);
     }
-    lb = -1;
+    lb = 0;
     ub = n;
     while (lb != ub) {
         int cen = (lb + ub) / 2;
