@@ -16,7 +16,7 @@ int p(int m){
 int main(){
   int i, lb, ub;
   lb = 0;
-  ub = 1000000000;
+  ub = 1000000001;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
