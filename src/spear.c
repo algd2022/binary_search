@@ -21,8 +21,8 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = -1;//値の修正
-  ub = 1000000000;
+  lb = 0;//値の修正
+  ub = 1000000001;
   /*bsearch*/
   while (ub - lb > 1){
     int mid = (lb + ub) / 2;
