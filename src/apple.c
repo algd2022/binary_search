@@ -18,8 +18,8 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = -1;
-  ub = 1000000000+1;
+  lb = 0;
+  ub = 1000000000;
   while (ub - lb > 1){
     int m = (lb + ub)/2;
     if(dbag(m)){

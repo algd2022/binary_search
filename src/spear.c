@@ -5,16 +5,11 @@ int k;
 int A[100000];
 
 int dlength(int x){
-  if (x != 0){
     int s = 0;
     for (int i = 0; i < n; i++){
       s = s + A[i]/x;
     }
     return s < k;
-  }
-  else{
-    return 0;
-  }
 }
 
 int main(){
@@ -23,8 +18,8 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
-  lb = -1;
-  ub = 100000000+1;
+  lb = 0;
+  ub = 1000000000;
   while (ub - lb > 1){
     int m = (lb + ub)/2;
     if(dlength(m)){
