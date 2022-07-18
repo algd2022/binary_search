@@ -22,7 +22,7 @@ int p(int x) {
 }
 
 int main(){
-    int i, lb = 0, ub = 1;
+    int i, lb = 0, ub = 0;
 
     //項数n　と　要素k　の入力
     scanf("%d%d", &n, &k);
@@ -32,16 +32,19 @@ int main(){
         scanf("%d", &A[i]);
         if (ub < A[i])ub = A[i];
     }
+    ub++;
 
     int mid = 0;
 
     while (ub - lb > 1) {
         mid = (ub + lb) / 2;
         if (p(mid)) {
+            printf("mid=%d,p=1\n", mid);
             lb = mid;
         }
         else {
             ub = mid;
+            printf("mid=%d,p=0\n", mid);
         }
     }
 
