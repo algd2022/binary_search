@@ -13,10 +13,10 @@ int main(){
   }
 
     lb = 0;
-    ub = 1000000000;
+    ub = 1000000001;
     while(ub - lb > 1)
     {
-        int mid = (lb + ub + 1) / 2;
+        int mid = (lb + ub) / 2;
         int cnt = 0;
         for(int i = 0; i < n; ++i)
         {
