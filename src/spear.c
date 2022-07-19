@@ -12,7 +12,7 @@ int p(int x)
     sum += (int)(A[i] / x);
   }
 
-  return (k < sum);
+  return (k <= sum);
 }
 
 int main()
