@@ -8,7 +8,7 @@ int p(int m){
   int j;
   int sum = 0;
   for(j = 0; j < n; j++){
-    sum = sum + (A[j] + m + 1)/m;
+    sum = sum + (A[j] + m - 1)/m;
   }
 return sum <= k;
 }
@@ -20,7 +20,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 lb = 0;
-ub = 1000000001;
+ub = 1000000000;
 
 while (ub - lb > 1){
   int mid = (lb + ub) / 2;
