@@ -9,29 +9,28 @@ int p(int index[],int mid){
     //人数のカウント、これとkを比較し評価
     int count = 1;
     int a;
-    int error = 0;
     for(a=0;a<n;a++){
-        if(sum+index[a]<=mid){
-            sum = sum + index[a];
-        }
-        else if(index[a]>mid){
-        	//midより大きい数値があったらlbを更新するようにする
-        	a++;
-        	count=k;
-        	error++;
+        if(mid>=index[a]){
+        	sum=sum+index[a];
+        	//仕事量がmid超えるか確認
+        	if(sum>mid){
+        		//次の人に移る
+        		count=count+1;
+        		//次の仕事を保存
+        		sum=index[a];
+        	}
         }
         else{
-        	//オーバーしたら次のカウントへ
-            count++;
-            //リセット
-            a--;
-            sum=0;
+        	//ありえないパターン
+        	return k+1;
         }
     }
-    if(error==1){
-    	count=count+1;
+    if(count>k){
+    	return k+1;
     }
-    return count;
+    else{
+    	return count;
+    }
 }
 
 int main(){
