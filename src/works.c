@@ -1,17 +1,24 @@
 #include <stdio.h>
-
 int n;
 int k;
 int A[100000];
 
-int p(int x){
-    int sum = 1, p = 0, m = 1;
-    for(int m=0; m < n; m++)
-        if(p z + a[m]<=x){p = p + x}
-        else if(x < A[m]){m = 0;}
-        else {p = A[m], sum++}
+int p(int m){
+  int k_need = 1;
+  int sum = 0;
+  for(int i = 0; i < n; i++){
+    if(A[i] > m){
+      return 0;
+    }else if(sum + A[i] <= m){
+      sum = sum + A[i];
+    }else{
+      k_need++;
+      sum = A[i];
+    }
+  }
+  return k_need <= k;
 }
-    return sum<=k && m
+
 
 int main(){
   int i, lb, ub;
@@ -19,7 +26,18 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
+  lb = 0;
+  ub = 1000000000;
+  while(ub - lb > 1){
+    int mid = (ub + lb) / 2;
+    if(p(mid)){
+      ub = mid;
+    }else{
+      lb = mid;
+    }
+  }
 
+  printf("%d", ub);
 
   return 0;
 }
