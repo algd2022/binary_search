@@ -62,7 +62,7 @@ bool p(int x)
       temp -= A[i];
       // printf("roop1(temp=%d,i=%d,count=%d)\n", temp, i, count);
       ++i;
-      if (temp < A[i] || i >= n)
+      if (i >= n || temp < A[i])
       {
         break;
       }
