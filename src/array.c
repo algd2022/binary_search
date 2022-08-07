@@ -15,7 +15,7 @@ int main(){
   }
 
   lb = 0;
-  ub = n;
+  ub = 100000;
 
 while(ub - lb > 1){
   int mid = (lb + ub) / 2;
