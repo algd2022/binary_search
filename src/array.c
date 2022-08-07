@@ -8,7 +8,7 @@ int A[100000];
 int main(){
   int i, lb, ub; /* 追記する */
   scanf("%d%d", &n, &k);
-  lb=0;
+  lb=-1;
   ub=n;
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
