@@ -18,11 +18,11 @@ int sum(int i, int x){
 int main(){
   int i, lb, ub;
   scanf("%d%d", &n, &k);
-  for(i = 0; i < n; i++){
+  for(i = 0; i < n ; i++){
     scanf("%d", &A[i]);
   }
-  lb = -1;
-  ub = A[n-1];
+  lb = 0;
+  ub = 1000000000;
   while(ub - lb > 1){
       int mid = (lb + ub) / 2;
       if(sum(n, mid) <= k){
