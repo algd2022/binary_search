@@ -10,11 +10,11 @@ int A[100000];
 int
 p (int m)
 {
-int i=1;//index of assignment to be finished
+int i=0;//index of assignment to be finished
 int person=1;//number of people who attended the work
 int s=0;
   //while there is assignment undone and personel available
-  while(i<=n&&person<=k){
+  while(i<n&&person<=k){
   // every person works continuously until working hours would 
   //surpass m to finish the next assignment
     if(s+A[i]<=m){
@@ -26,9 +26,9 @@ int s=0;
         s=0;
     }
   }
-  // the negation of the looping condition is i>n or person>k
-  // it requires no more than k people to finish the work
-  if(i>n){
+  // the negation of the looping condition is i>=n or person>k
+  // it requires at most k people to finish the work
+  if(i>=n){
       return person<=k;
 }
   // if there are no personel available and there is assignment left, then 
@@ -42,7 +42,7 @@ main ()
 {
   int i, lb, ub;
   scanf ("%d%d", &n, &k);
-  for (i = 1; i <= n; i++)
+  for (i = 0; i < n; i++)
     {
       scanf ("%d", &A[i]);
     }
