@@ -3,7 +3,7 @@
 int n;
 int k;
 int A[100000];
-int max = 1;
+int max = 1000000001;
 
 int p(int m){
   	int i,a = 0;
@@ -17,8 +17,6 @@ int main(){
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
-    if(A[i] > max){
-    	max = A[i];
 	}
   }
   lb = 0;

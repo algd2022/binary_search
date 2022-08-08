@@ -14,7 +14,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   ub = n;
-  lb = 0;
+  lb = -1;
   while(ub - lb > 1){
   	int mid = (lb + ub) / 2;
   	if(A[mid] >= k){
