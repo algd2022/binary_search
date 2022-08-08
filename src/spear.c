@@ -14,7 +14,7 @@ int main(){
   }
 
   lb = 0;
-  ub = A[max];
+  ub = 1000000001;
 
   while (ub - lb > 1){
     sum = 0;
