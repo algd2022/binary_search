@@ -14,15 +14,6 @@ int p(int m){
   return (long long int) sum < k;
 }
 
-//ubの値に代入するために配列の成分の和を求める
-int m(int B[]){
-  int max = 0;
-  for(int j = 0; j < n; j++){
-    if(max <= B[j]) max = B[j];
-  }
-  return max;
-}
-
 int main(){
   int i, lb, ub;
   scanf("%d%d", &n, &k);
@@ -30,7 +21,7 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = m(A);
+  ub = 100000001;
   while(ub - lb > 1){
     int mid = (ub + lb) / 2;
     if(p(mid)) ub = mid;
