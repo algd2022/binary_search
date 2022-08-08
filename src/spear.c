@@ -6,6 +6,9 @@ int A[100000];
 
 int p(int x)
 {
+  if (x == 0)
+    return 0;
+
   int k2 = 0;
   for (int i = 0; i < n; i++)
   {
