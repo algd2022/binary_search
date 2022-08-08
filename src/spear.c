@@ -11,7 +11,23 @@ int main(){
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
   }
+  lb = 0;
+  ub = 1000000001;
+  int siguma;
+  while(ub - lb > 1) {
+    int mid = (lb + ub) / 2;
+    siguma = 0;
+    for(i = 0; i < n; i++){
+      siguma = siguma + A[i] / mid;
+    }
+    if(siguma >= k){
+      lb = mid;
+    }
+    else{
+      ub = mid;
+    }
+  }
 
-
+  printf("%d\n", lb);
   return 0;
 }
