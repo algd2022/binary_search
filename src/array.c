@@ -14,7 +14,7 @@ int main(){
   ub = n;
   while(ub - lb > 1){
     int mid = (lb + ub)/2;
-    if(A[mid] > k) ub = mid;
+    if(A[mid] >= k) ub = mid;
     else lb = mid;
   }
   printf("%u", ub);
