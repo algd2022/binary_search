@@ -25,7 +25,7 @@ int main()
   }
 
   int lb = 0;
-  int ub = 100000000;
+  int ub =  1000000000;
 
   while (ub - lb > 1)
   {

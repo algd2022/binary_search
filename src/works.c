@@ -4,18 +4,26 @@ int n;
 int k;
 int A[100000];
 
-
 unsigned int p(int x)
 {
   int sum = 0;
+  int w = 1;
   for (int i = 0; i < n; i++)
   {
-    sum += A[i] / x;
+    if (A[i] > x)
+      return 0;
+    if (sum + A[i] > x)
+    {
+      sum = A[i];
+      w++;
+    }
+    else
+    {
+      sum += A[i];
+    }
   }
-
-  return sum < k;
+  return w <= k;
 }
-
 
 int main()
 {
@@ -27,7 +35,7 @@ int main()
   }
 
   int lb = 0;
-  int ub = 100000000;
+  int ub = 1000000000;
 
   while (ub - lb > 1)
   {
@@ -39,7 +47,7 @@ int main()
       lb = mid;
   }
 
-  printf("%d", lb);
+  printf("%d", ub);
 
   return 0;
 }
