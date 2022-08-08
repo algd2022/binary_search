@@ -7,7 +7,7 @@ int A[100000];
 int p(int x)
 {
   if (x == 0)
-    return 0;
+    return 1;
 
   int k2 = 0;
   for (int i = 0; i < n; i++)
@@ -46,7 +46,7 @@ int main()
     scanf("%d", &A[i]);
   }
 
-  printf("%d\n", binary_search(p, 1, 1000000000));
+  printf("%d\n", binary_search(p, 1, 1000000001));
 
   return 0;
 }
