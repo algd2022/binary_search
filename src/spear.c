@@ -24,10 +24,11 @@ int main(){
     scanf("%d", &A[i]);
   }
   lb = 0;
-  ub = A[0];
+  ub = 0;
   for(i = 0; i < n; i++){
-    if(ub < A[i]) ub = A[i];
+    ub += A[i];
   }
+  ub /= n;
   
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
