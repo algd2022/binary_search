@@ -31,7 +31,7 @@ int main()
         scanf("%d", &A[i]);
     }
     lb = 0;
-    ub = 100000000;
+    ub = 10000000;
     while (ub - lb > 1) {
         int mid = (lb + ub) / 2;
         if (can_distribute(mid)) {
