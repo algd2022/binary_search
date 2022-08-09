@@ -7,7 +7,7 @@ int k = 0;
 int A[100000];
 
 int p(int i1,int i2,int X[]){
-  return X[i2] > i1;
+  return X[i2] >= i1;
 }
 
 int main(){
