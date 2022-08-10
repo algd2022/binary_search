@@ -29,8 +29,8 @@ int main(){
     if(max < A[i])
       max = A[i];
   }
-  lb = max;
-  ub = 10000;
+  lb = 0;
+  ub = 1000000000;
   while(ub - lb > 1){
     int mid = (lb + ub) / 2;
     if(p(mid)){
